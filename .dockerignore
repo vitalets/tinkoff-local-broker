@@ -1,0 +1,8 @@
+.git
+.idea
+.editorconfig
+.cache
+.vscode
+Dockerfile
+node_modules
+npm-debug.log

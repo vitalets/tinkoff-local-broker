@@ -17,7 +17,9 @@
 ## Запуск сервера
 Запустить сервер удобнее всего через докер:
 ```
+docker run --init --rm -p 8080:8080 -v $(pwd)/.cache:/app/.cache vitalets/tinkoff-local-broker
 ```
+
 
 ## Конфигурация
 Для конфигурации брокера нужно отправить специальную заявку указав поле `accountId` = `"config"`,
@@ -29,6 +31,20 @@
 ## Переход по свечам
 ```
 ```
+
+## Разработка
+Запуск тестов:
+```
+npm t
+```
+
+Релиз новой версии:
+```bash
+./scripts/release latest
+# или
+./scripts/release x.x
+```
+
 
 ## Лицензия
 MIT @ [Vitaliy Potapov](https://github.com/vitalets)

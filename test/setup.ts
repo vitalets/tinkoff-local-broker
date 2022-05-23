@@ -13,7 +13,7 @@ declare global {
 before(async () => {
   const port = await server.listen(`localhost:0`);
   const testApi = new TinkoffInvestApi({
-    token: process.env.TINKOFF_API_TOKEN_READONLY!,
+    token: process.env.TINKOFF_API_TOKEN!,
     endpoint: `localhost:${port}`,
   });
 
