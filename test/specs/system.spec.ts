@@ -1,5 +1,4 @@
 import { CandleInterval } from 'tinkoff-invest-api/dist/generated/marketdata.js';
-import { OrderDirection, OrderType } from 'tinkoff-invest-api/dist/generated/orders.js';
 import { BrokerOptions } from '../../src/options.js';
 import MockDate from 'mockdate';
 
@@ -11,8 +10,8 @@ export async function configureBroker(config: Partial<BrokerOptions> = {}) {
     accountId: 'config',
     figi: JSON.stringify(config),
     quantity: 0,
-    direction: OrderDirection.ORDER_DIRECTION_BUY,
-    orderType: OrderType.ORDER_TYPE_LIMIT,
+    direction: 0,
+    orderType: 0,
     orderId: '',
   });
   await tickBroker();
@@ -23,8 +22,8 @@ export async function tickBroker() {
     accountId: 'tick',
     figi: '',
     quantity: 0,
-    direction: OrderDirection.ORDER_DIRECTION_BUY,
-    orderType: OrderType.ORDER_TYPE_LIMIT,
+    direction: 0,
+    orderType: 0,
     orderId: '',
   });
   if (res.message) {
