@@ -1,16 +1,17 @@
 {
   "name": "tinkoff-local-broker",
+  "description": "Tinkoff Invest API as local server for testing trading bots",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "lint": "eslint src test --ext .ts",
     "tsc": "tsc --noEmit",
-    "start": "ts-node-esm src/start.ts",
+    "start": "DEBUG=tinkoff-local-broker:* ts-node-esm src/server/start.ts",
     "test": "mocha -n loader=ts-node/esm test/setup.ts test/specs/*.ts -t 7000",
     "test:d": "DEBUG=tinkoff-local-broker:* npm t"
   },
   "lint-staged": {
-    "{src}/**/*.ts": "eslint --ext .ts"
+    "{src,test}/**/*.ts": "eslint --ext .ts"
   },
   "dependencies": {
     "debug": "^4.3.4",
