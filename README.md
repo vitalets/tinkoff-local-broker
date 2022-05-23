@@ -1,4 +1,8 @@
-# tinkoff-local-broker
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/1473072/169879846-79e51aa0-a2d5-4965-a865-84d92b364900.png">
+</p>
+
+<h1 align="center">tinkoff-local-broker</h1>
 Локальный сервер для тестирования торговых роботов на [Tinkoff Invest API](https://tinkoff.github.io/investAPI/).
 Предоставляет полностью идентичное API и позволяет быстро прогнать любую стратегию на исторических данных.
 
