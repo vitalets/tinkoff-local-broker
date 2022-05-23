@@ -1,0 +1,40 @@
+{
+  "name": "tinkoff-local-broker",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint src test --ext .ts",
+    "tsc": "tsc --noEmit",
+    "start": "ts-node-esm src/start.ts",
+    "test": "mocha -n loader=ts-node/esm test/setup.ts test/specs/*.ts -t 7000",
+    "test:d": "DEBUG=tinkoff-local-broker:* npm t"
+  },
+  "lint-staged": {
+    "{src}/**/*.ts": "eslint --ext .ts"
+  },
+  "dependencies": {
+    "debug": "^4.3.4",
+    "tinkoff-invest-api": "^2.4.7"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.7",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "^17.0.35",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.16.0",
+    "eslint-plugin-mocha": "^10.0.3",
+    "lint-staged": "^12.3.3",
+    "mocha": "^10.0.0",
+    "mockdate": "^3.0.5",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.6.4"
+  },
+  "author": "Vitaliy Potapov",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vitalets/tinkoff-local-broker.git"
+  },
+  "license": "Apache-2.0"
+}
